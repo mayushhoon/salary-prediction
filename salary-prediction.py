@@ -32,7 +32,7 @@ X = df[['Experience Years']]
 y = df['Salary']
 
 print('Independent variable (X):')
-display(X.head())
+st.write(X.head())
 print('\nDependent variable (y):')
 display(y.head())
 
