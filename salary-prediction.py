@@ -19,4 +19,12 @@ if st.button("Predict"):
     input_data = pd.DataFrame([[exp]], columns=['Experience Years'])
     prediction = model.predict(input_data)
 
-    st.success(f"💰 Predicted Salary: ${prediction[0]:,.2f}")
+    usd_salary = prediction[0]
+usd_to_inr = 93
+inr_salary = usd_salary * usd_to_inr
+
+st.success(f"""
+💰 Predicted Salary:
+- USD: ${usd_salary:,.2f}
+- INR: ₹{inr_salary:,.2f}
+""")
